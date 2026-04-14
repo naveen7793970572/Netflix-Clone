@@ -27,7 +27,8 @@ body {
 
 nav {
     display: flex;
-    max-width: 60vw;
+    max-width: 1200px;
+    width: 90%;
     margin: auto;
     justify-content: space-between;
     align-items: center;
@@ -91,7 +92,9 @@ nav button {
 }
 
 .main input {
-    padding: 14px 150px 14px 12px;
+    padding: 14px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 6px;
     font-weight: 600;
     font-size: 13px;
@@ -119,6 +122,7 @@ nav button {
     justify-content: center;
     align-items: center;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .first .first-head {
@@ -133,8 +137,8 @@ nav button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 50px 83px;
-    gap: 50px;
+    margin: 32px 23px;
+    gap: 20px;
     overflow-x: auto;
     padding: 10px;
     scroll-behavior: smooth;
@@ -255,7 +259,9 @@ nav button {
 }
 
 .details input {
-    padding: 14px 200px 14px 12px;
+    padding: 14px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 6px;
     font-weight: 500;
     font-size: 16px;
@@ -267,7 +273,8 @@ nav button {
 
 footer {
     color: white;
-    max-width: 60vw;
+    max-width: 1200px;
+    width: 90%;
     margin: auto;
     padding: 14px;
 }
@@ -367,7 +374,8 @@ footer .questions {
     }
 
     .last-btn input {
-        width: 30vw;
+        width: 100%;
+        max-width: 400px;
     }
 }
 
@@ -376,7 +384,7 @@ footer .questions {
         flex-direction: column;
     }
 
-    .footer{
+    .footer {
         align-items: center;
         gap: 15px;
     }
@@ -389,7 +397,19 @@ footer .questions {
         color: white;
     }
 
-    .Faq{
+    .Faq {
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero-buttons {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .hero-buttons input,
+    .hero-buttons button {
+        width: 70%;
     }
 }
