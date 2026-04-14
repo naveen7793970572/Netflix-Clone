@@ -382,7 +382,7 @@ footer .questions {
     }
 }
 
-@media screen and(max-width:500px) {
+@media screen and (max-width:500px) {
     .footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
