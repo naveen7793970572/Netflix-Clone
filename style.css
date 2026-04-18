@@ -12,17 +12,20 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh;
+    min-height: 70vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .main .box {
-    height: 70vh;
+    height: 100%;
     width: 100%;
     opacity: 0.7;
     background-color: black;
     position: absolute;
     top: 0;
+    left: 0;
 }
 
 nav {
@@ -48,7 +51,7 @@ nav button {
 }
 
 .hero {
-    height: calc(100% - 100px);
+    flex: 1;
     display: flex;
     position: relative;
     color: white;
@@ -57,7 +60,7 @@ nav button {
     flex-direction: column;
     line-height: 45px;
     text-align: center;
-    padding: 0px 30px;
+    padding: 30px 30px;
     gap: 23px;
 }
 
@@ -282,339 +285,127 @@ footer {
     padding: 14px;
 }
 
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .footer a {
     text-decoration: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
     font-family: sans-serif;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 footer .questions {
     font-family: sans-serif;
     padding: 34px 0;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.footer {
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        color: white;
-        gap: 2rem;
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .main {
+        min-height: 80vh;
     }
-
-    .footer-item {
-        display: flex;
-        flex-direction: column;
-        gap: 23px;
+    .main .box {
+        height: 100%;
     }
-
-    @media screen and (max-width: 815px) {
-        .main {
-            background-image: url("bg.jpg");
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 70vh;
-            position: relative;
-        }
-
-        .hero {
-            height: calc(100% - 100px);
-            display: flex;
-            position: relative;
-            color: white;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            line-height: 31px;
-            text-align: center;
-            padding: 0px 1.5rem;
-            gap: 11px;
-        }
-
-        .hero> :first-child {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 32px;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .hero> :nth-child(2) {
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            font-size: 20px;
-        }
-
-        .hero> :nth-child(3) {
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-        }
-
-        .btn-red {
-            background-color: red;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-size: 15px;
-            font-weight: 200;
-        }
-
-        nav img {
-            color: red;
-            width: 100px;
-            position: relative;
-            z-index: 10;
-        }
-
-        nav {
-            width: 90%;
-        }
-
-        .img-elements {
-            height: 200px;
-            width: 120px;
-        }
-
-        .boxes {
-            min-width: 160px;
-        }
-
-        .first-head {
-            font-size: 1.8rem;
-        }
-
-        .scd-head {
-            font-size: 1.5rem;
-        }
-    }
-
-    @media screen and (max-width:860px) {
-    .last-btn {
-        flex-direction: column;
-    }
-
-    .last-btn input {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .details input {
-        width: 90%;
-        max-width: 400px;
-    }
-}
-
-@media screen and (max-width:690px) {
-    .hero-buttons {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .footer {
-        align-items: center;
-        gap: 15px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .img-elements {
-        height: 180px;
-        width: 100px;
-    }
-
-    .boxes {
-        flex: 1 1 150px;
-        min-width: 140px;
-    }
-
-    .Faq {
-        font-size: 24px;
-    }
-
-    .faq-questions {
-        width: 95%;
-        max-width: 100%;
-        margin: auto;
-        font-size: 16px;
-    }
-
-    .details p {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width:500px) {
-    .footer {
-        display: grid;
-        grid-template-columns: 1fr;
-        color: white;
-    }
-
-    .Faq {
-        font-size: 20px;
-        padding: 15px;
-    }
-
-    .img-elements {
-        height: 160px;
-        width: 90px;
-    }
-
-    .boxes {
-        flex: 1 1 120px;
-        min-width: 120px;
-        height: 200px;
-    }
-
-    .boxes h3 {
-        font-size: 18px;
-        margin: 15px;
-    }
-
-    .boxes p {
-        font-size: 13px;
-        margin: 15px;
-    }
-
-    .hero> :first-child {
-        font-size: 24px;
-    }
-
-    .hero> :nth-child(2),
-    .hero> :nth-child(3) {
-        font-size: 16px;
-    }
-
-    .hero-buttons input,
-    .hero-buttons button {
-        width: 95%;
-        font-size: 14px;
-    }
-
-    .btn-red {
-        padding: 8px 16px;
-        font-size: 13px;
-    }
-
-    .details input {
-        width: 95%;
-        padding: 12px;
-        font-size: 14px;
-    }
-
-    .faq-questions {
-        height: 50px;
-        width: 95%;
-        padding: 0px 16px;
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    .plus {
-        font-size: 20px;
-    }
-
-    .reasons {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .first-head,
-    .scd-head {
-        margin: 10px 1rem;
-        font-size: 18px;
-    }
-
     nav {
         height: 80px;
     }
+    nav img {
+        width: 100px;
+    }
+    .hero {
+        padding-top: 2rem;
+    }
+    .hero> :first-child {
+        font-size: 36px;
+    }
+    .hero> :nth-child(2), .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    .main input {
+        max-width: 100%;
+        width: 90%;
+        box-sizing: border-box;
+    }
+    .btn-red {
+        width: 90%;
+        max-width: 430px;
+        font-size: 18px;
+        box-sizing: border-box;
+    }
+    .first .first-head, .scd-head {
+        font-size: x-large;
+        margin: 1.5rem;
+    }
+    .faq-questions {
+        max-width: 100%;
+        width: 90%;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+    .Faq {
+        font-size: x-large;
+    }
+    .details input {
+        margin: 10px auto;
+        max-width: 90%;
+        box-sizing: border-box;
+    }
+    .last-btn {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    .boxes {
+        flex: 1 1 100%;
+    }
+}
 
+@media screen and (max-width: 480px) {
+    .hero> :first-child {
+        font-size: 28px;
+    }
+    .hero> :nth-child(2), .hero> :nth-child(3) {
+        font-size: 16px;
+    }
     nav img {
         width: 80px;
     }
-
-    .main {
-        height: 60vh;
+    .btn-red {
+        font-size: 16px;
+        padding: 10px;
     }
-
-    .main .box {
-        height: 60vh;
+    .details p {
+        font-size: medium;
     }
-
-    .hero {
-        height: calc(60vh - 80px);
-        padding: 0px 1rem;
+    .first .first-head, .scd-head {
+        font-size: large;
+        margin: 1rem;
     }
-}
-
-@media screen and (max-width: 600px) {
-    .hero-buttons {
-        flex-direction: column;
-        width: 95%;
-        gap: 1rem;
+    .boxes h3 {
+        font-size: large;
     }
-
-    .hero-buttons input,
-    .hero-buttons button {
-        width: 95%;
-    }
-
-    .main input {
-        max-width: 95%;
-    }
-}
-
-@media screen and (max-width: 380px) {
-        .hero> :first-child {
-            font-size: 20px;
-            line-height: 1.3;
-        }
-
-        .hero> :nth-child(2),
-        .hero> :nth-child(3) {
-            font-size: 14px;
-            line-height: 1.3;
-        }
-
-        .hero-buttons {
-            gap: 0.5rem;
-        }
-
-        .btn-red {
-            padding: 7px 12px;
-            font-size: 12px;
-        }
-
-        .main input {
-            padding: 10px;
-            font-size: 12px;
-        }
-
-        nav {
-            height: 70px;
-        }
-
-        nav img {
-            width: 70px;
-        }
-
-        .first-head,
-        .scd-head {
-            font-size: 16px;
-        }
-
-        .boxes h3 {
-            font-size: 16px;
-            margin: 12px;
-        }
-
-        .boxes p {
-            font-size: 12px;
-            margin: 12px;
-        }
-
-        .footer a {
-            font-size: 12px;
-        }
+    .boxes p {
+        font-size: small;
     }
 }
